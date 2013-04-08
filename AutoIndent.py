@@ -1,6 +1,8 @@
 import sublime, sublime_plugin, re
 
-from BeautifulSoup import BeautifulSoup
+import html5lib
+
+from bs4 import BeautifulSoup
 
 
 
@@ -10,8 +12,10 @@ class AutoindentCommand(sublime_plugin.TextCommand):
     
     reg = sublime.Region(0, self.view.size())
 
-    soup = BeautifulSoup(soup.encode('raw_unicode_escape'))
+    soup = BeautifulSoup(soup.encode('raw_unicode_escape'), features="html5lib")
 
     soup = soup.prettify()
 
-    self.view.replace(edit, reg, soup.decode('utf-8'))
+    #print soup.encode('utf-8')
+
+    self.view.replace(edit, reg, soup)
