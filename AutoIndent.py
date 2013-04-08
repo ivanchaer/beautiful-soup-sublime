@@ -12,7 +12,7 @@ class AutoindentCommand(sublime_plugin.TextCommand):
     
     reg = sublime.Region(0, self.view.size())
 
-    soup = BeautifulSoup(soup.encode('raw_unicode_escape'), features="html5lib")
+    soup = BeautifulSoup(soup.encode('utf-8'), features="html5lib")
 
     soup = soup.prettify()
 
