@@ -1,5 +1,5 @@
-beautiful-soup-sublime
-======================
+Beautiful Soup - plugin for Sublime Text 2
+==========================================
 
-* Beautiful Soup beautifier for Sublime Text 2 plugin *
+*Beautiful Soup beautifier for Sublime Text 2 plugin*
 
